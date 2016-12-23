@@ -6,7 +6,7 @@
 
 # dependencies
 /node_modules
-/constants
+/src/app/constants/*
 # IDEs and editors
 /.idea
 .project
