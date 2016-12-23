@@ -6,7 +6,7 @@
 
 # dependencies
 /node_modules
-/src/app/weather-widget/constants/*.ts
+/app/weather-widget/constants/*.ts
 # IDEs and editors
 /.idea
 .project
