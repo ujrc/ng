@@ -1,0 +1,29 @@
+.panel{
+    box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.24);
+text-transform: uppercase;
+}
+
+.panel,
+.panel-heading,
+.panel-footer{
+    border:none;
+    border-radius: #00BCD4;
+    background-color: #1F4B7C;
+    color: #FFF;
+}.panel-heading,
+.panel-footer{
+    padding: 1em .5em;
+}
+.panel-body{
+    padding: 3em;
+}
+
+.panel-body,
+.panel-footer{
+    text-align: center;
+}
+
+.padding{
+    padding-top: .6em;
+    margin-top: 0em;
+}
