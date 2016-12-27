@@ -3,7 +3,7 @@
   <div class="panel panel-default" (click)="toggleUnits()" [ngStyle]="setStyles()">
     <div class="panel-heading" [class.invisible]="!dataRecieved"> <div class="row">
     <div class="col-xs-8" id="location-wrapper">
-        <p class="">{{currentLocation}}</p>
+        <p class=""><i id="location-icon" class="fa fa-map-marker" aria-hidden="true"></i>{{currentLocation}}</p>
     </div>
     <div class="col-xs-4 text-xs-right">
         <h3 class="">{{weatherData.temp|temperatureUnit:currentTempUnit|number:'.0-0'}}&deg;</h3>

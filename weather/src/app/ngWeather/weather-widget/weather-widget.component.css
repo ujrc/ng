@@ -2,6 +2,8 @@
     box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.24);
 transition: background-color .5s ease;
 cursor: pointer;
+width: 250px;
+height: 280px;
 }
 
 .panel,
@@ -13,11 +15,14 @@ cursor: pointer;
     color: #FFF;
 }.panel-heading,
 .panel-footer{
-    padding: 1em .5em;
+    padding: 1rem .5rem;
     background-color: transparent;
 }
 #location-wrapper{
-    font-size: 1.1em;
+    font-size: 1.1rem;
+}
+#location-icon{
+    padding-right: .5rem;
 }
 .panel-body{
     padding: 1.5rem;
@@ -31,11 +36,14 @@ cursor: pointer;
    top: 50%;
    left:50%;
    width: 50%;
-    margin: -15% 0 0 -25%;
+    margin: -8% 0 0 -25%;
 }
 canvas{
+    width: 40%;
+    height: 40%;
     max-width: 250px;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
+
 }
 
 .panel-body,
@@ -43,22 +51,19 @@ canvas{
     text-align: center;
 }
 #detail-row{
-    font-size: .8em;
+    font-size: .8rem;
 }
 
 .panel-footer{
-    padding-bottom: 2rem;
+    padding-bottom: .5rem;
 }
 
  #helper-text{
 padding-top:.5rem; 
 }
-.padding{
-    padding-top: .6em;
-    margin-top: 0em;
-}
+
 p{
-    margin: .2em;
+    margin: .2rem;
 
 }
 p:not(.unit-label){

@@ -1,8 +1,8 @@
-export const FORECAST_KEY="YOUR_FORECAST_KEY";
+export const FORECAST_KEY="YOUR_FORECAST_API_KEY";
 export const FORECAST_ROOT_URL="https://api.darksky.net/forecast/";
 
 
-export const GOOGLE_KEY ="YOUR_GOOGLE_KEY";
+export const GOOGLE_KEY ="YOUR_GOOGLE_API_KEY";
 export const GOOGLE_ROOT ="https://maps.googleapis.com/maps/api/geocode/json";
 
 
@@ -42,7 +42,7 @@ export const WEATHER_COLORS={
     },
     'cloudy':{
         'background-color':'#848C96',
-        'color':'#000'
+        'color':'#FFF'
     },
     'partly-cloudy-day':{
         'background-color':'#D2D7D3',
