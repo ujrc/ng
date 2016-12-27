@@ -1,25 +1,33 @@
 
 
-  <div class="panel panel-default">
-    <div class="panel-heading"><div class="row">
-    <div class="col-xs-8">
-        <p class="padding">Madison,Wi&nbsp;&nbsp;USA</p>
+  <div class="panel panel-default" (click)="toggleUnits()" [ngStyle]="setStyles()">
+    <div class="panel-heading" [class.invisible]="!dataRecieved"> <div class="row">
+    <div class="col-xs-8" id="location-wrapper">
+        <p class="">{{currentLocation}}</p>
     </div>
     <div class="col-xs-4 text-xs-right">
-        <h3 class="padding">1&deg;</h3>
+        <h3 class="">{{weatherData.temp|temperatureUnit:currentTempUnit|number:'.0-0'}}&deg;</h3>
     </div></div></div>
-    <div class="panel-body"><h1 class="padding">0</h1>
-    <p class="padding">Rain</p></div>
-    <div class="panel-footer">
-    <div class="row">
+    <div class="panel-body">
+    <div id="indicator" [hidden]="dataRecieved">
+        <i class="fa fa-refresh fa-spin fa-4x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+    </div>
+    <canvas id="icon" [hidden]="!dataRecieved"></canvas>
+    <p class=""> {{weatherData.summary}} </p></div>
+    <div class="panel-footer" [class.invisible]="!dataRecieved">
+    <div class="row" id="detail-row">
     <div class="col-xs-5">
-        <p class="padding">Wind</p>
-        <p class="padding">2mph</p>
+        <p class="">Wind</p>
+        <p class=" unit-label">{{weatherData.wind | speedUnit:currentSpeedUnit}}</p>
     </div>
     <div class="col-xs-5 col-xs-offset-2">
         <p>Humidity</p>
-        <p>69%</p>
+        <p>{{weatherData.humidity|percent}}</p>
     </div>
+    </div>
+    <div class="row" id="helper-row">
+       <small class="text-muted"> Click to switch between &deg;f/kph and &deg;c/mph</small> 
     </div>
     </div>
   </div>

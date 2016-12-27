@@ -1,6 +1,7 @@
 .panel{
     box-shadow: 2px 2px 4px 0 rgba(0,0,0,0.24);
-text-transform: uppercase;
+transition: background-color .5s ease;
+cursor: pointer;
 }
 
 .panel,
@@ -13,17 +14,53 @@ text-transform: uppercase;
 }.panel-heading,
 .panel-footer{
     padding: 1em .5em;
+    background-color: transparent;
+}
+#location-wrapper{
+    font-size: 1.1em;
 }
 .panel-body{
-    padding: 3em;
+    padding: 1.5rem;
+}
+#indicator{
+    height: 80px;
+    position: relative;
+}
+#indicator i{
+   position: absolute;
+   top: 50%;
+   left:50%;
+   width: 50%;
+    margin: -15% 0 0 -25%;
+}
+canvas{
+    max-width: 250px;
+    margin-bottom: 1em;
 }
 
 .panel-body,
 .panel-footer{
     text-align: center;
 }
+#detail-row{
+    font-size: .8em;
+}
 
+.panel-footer{
+    padding-bottom: 2rem;
+}
+
+ #helper-text{
+padding-top:.5rem; 
+}
 .padding{
     padding-top: .6em;
     margin-top: 0em;
+}
+p{
+    margin: .2em;
+
+}
+p:not(.unit-label){
+    text-transform: uppercase;
 }
