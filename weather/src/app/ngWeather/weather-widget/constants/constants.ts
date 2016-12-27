@@ -1,4 +1,4 @@
-export const FORECAST_KEY="YOUR_FORECAST_API_KEY";
+export const FORECAST_KEY="YOUR_FORECAST_KEY";
 export const FORECAST_ROOT_URL="https://api.darksky.net/forecast/";
 
 
