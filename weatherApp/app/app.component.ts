@@ -2,8 +2,9 @@ import {Component, OnInit} from '@angular/core';
 
 
 @Component({
+//    moduleId:module.id // used to find external files
 selector:'app-root',
-template:'<h1>Weathe App</h1>'
+templateUrl:'./app/app.component.html'
 })
 
 export class AppComponent implements OnInit{

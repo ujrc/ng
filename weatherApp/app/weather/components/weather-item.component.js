@@ -8,21 +8,27 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var weather_item_1 = require('./../model/weather-item');
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var WeatherItemComponent = (function () {
+    function WeatherItemComponent() {
     }
-    AppComponent.prototype.ngOnInit = function () {
+    WeatherItemComponent.prototype.ngOnInit = function () {
     };
-    AppComponent = __decorate([
+    __decorate([
+        core_1.Input('weather'), 
+        __metadata('design:type', weather_item_1.WeatherItem)
+    ], WeatherItemComponent.prototype, "weatherItem", void 0);
+    WeatherItemComponent = __decorate([
         core_1.Component({
-            //    moduleId:module.id // used to find external files
-            selector: 'app-root',
-            templateUrl: './app/app.component.html'
+            selector: 'app-weather-item',
+            // inputs:['weatherItem'],
+            // inputs:['weatherItem:weather'],
+            templateUrl: './app/weather/components/weather-item.component.html'
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], WeatherItemComponent);
+    return WeatherItemComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.WeatherItemComponent = WeatherItemComponent;
+//# sourceMappingURL=weather-item.component.js.map

@@ -8,21 +8,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var weather_data_1 = require('./../services/weather.data');
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var WeatherListComponent = (function () {
+    function WeatherListComponent() {
     }
-    AppComponent.prototype.ngOnInit = function () {
+    WeatherListComponent.prototype.ngOnInit = function () {
+        this.weatherItems = weather_data_1.WEATHER_ITEMS;
     };
-    AppComponent = __decorate([
+    WeatherListComponent = __decorate([
         core_1.Component({
-            //    moduleId:module.id // used to find external files
-            selector: 'app-root',
-            templateUrl: './app/app.component.html'
+            selector: 'app-weather-list',
+            templateUrl: './app/weather/components/weather-list.component.html',
         }), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], WeatherListComponent);
+    return WeatherListComponent;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.WeatherListComponent = WeatherListComponent;
+//# sourceMappingURL=weather-list.component.js.map
