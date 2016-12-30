@@ -1,7 +1,7 @@
 "use strict";
 var WeatherItem = (function () {
-    function WeatherItem(location, description, temperature, wind) {
-        this.location = location;
+    function WeatherItem(cityName, description, temperature, wind) {
+        this.cityName = cityName;
         this.description = description;
         this.temperature = temperature;
         this.wind = wind;

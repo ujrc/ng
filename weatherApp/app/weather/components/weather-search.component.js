@@ -8,23 +8,30 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var weather_item_1 = require('./../model/weather-item');
 var weather_service_1 = require('./../services/weather.service');
 var core_1 = require('@angular/core');
-var WeatherListComponent = (function () {
-    function WeatherListComponent(weatherService) {
+var WeatheSearchComponent = (function () {
+    function WeatheSearchComponent(weatherService) {
         this.weatherService = weatherService;
     }
-    WeatherListComponent.prototype.ngOnInit = function () {
-        this.weatherItems = this.weatherService.getWeatherItems();
+    WeatheSearchComponent.prototype.onSubmit = function (form) {
+        var _this = this;
+        this.weatherService.searchWeatherData(form.value.location)
+            .subscribe(function (data) {
+            var weatherItem = new weather_item_1.WeatherItem(data.name, data.weather[0].description, data.main.temp, data.wind.speed);
+            _this.weatherService.addWeatherItem(weatherItem);
+            console.log(weatherItem);
+        });
     };
-    WeatherListComponent = __decorate([
+    WeatheSearchComponent = __decorate([
         core_1.Component({
-            selector: 'app-weather-list',
-            templateUrl: './app/weather/components/weather-list.component.html',
+            selector: 'app-weather-search',
+            templateUrl: './app/weather/components/weather-search.component.html',
         }), 
         __metadata('design:paramtypes', [weather_service_1.WeatherService])
-    ], WeatherListComponent);
-    return WeatherListComponent;
+    ], WeatheSearchComponent);
+    return WeatheSearchComponent;
 }());
-exports.WeatherListComponent = WeatherListComponent;
-//# sourceMappingURL=weather-list.component.js.map
+exports.WeatheSearchComponent = WeatheSearchComponent;
+//# sourceMappingURL=weather-search.component.js.map
