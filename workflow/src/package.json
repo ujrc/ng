@@ -1,0 +1,48 @@
+{
+  "name": "webpack-skeleton",
+  "version": "1.0.0",
+  "description": "webpack seed project",
+  "main": "index.js",
+  "repository": {},
+  "dependencies": {
+    "@angular/common": "~2.4.0",
+    "@angular/compiler": "~2.4.0",
+    "@angular/core": "~2.4.0",
+    "@angular/forms": "~2.4.0",
+    "@angular/http": "~2.4.0",
+    "@angular/platform-browser": "~2.4.0",
+    "@angular/platform-browser-dynamic": "~2.4.0",
+    "@angular/router": "~3.4.0",
+    "@angular/upgrade": "~2.4.0",
+    "angular-in-memory-web-api": "~0.1.18",
+    "bootstrap": "^4.0.0-alpha.5",
+    "core-js": "^2.4.1",
+    "jquery": "^3.1.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "^5.0.1",
+    "tether": "^1.4.0",
+    "zone.js": "^0.7.4"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.35",
+    "@types/node": "~6.9.1",
+    "angular2-router-loader": "^0.3.4",
+    "angular2-template-loader": "^0.6.0",
+    "awesome-typescript-loader": "^3.0.0-beta.17",
+    "del-cli": "^0.2.1",
+    "html-loader": "^0.4.4",
+    "html-webpack-plugin": "^2.25.0",
+    "lite-server": "^2.2.2",
+    "raw-loader": "^0.5.1",
+    "typescript": "^2.1.4",
+    "webpack": "^2.1.0-beta.21",
+    "webpack-dev-server": "^2.1.0-beta.8",
+    "webpack-merge": "^2.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error:no test qpesified\" && exit 1",
+    "build": "webpack-dev-server --inline --progress --port 8080 --config webpack.config.dev.js"
+  },
+  "author": "",
+  "license": ""
+}
