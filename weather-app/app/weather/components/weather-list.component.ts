@@ -1,4 +1,4 @@
-import { WeatherService } from './../services/weather.service';
+import { WeatherService } from './../services/weather.services';
 import { WEATHER_ITEMS } from './../services/weather.data';
 import { WeatherItem } from './../model/weather-item';
 
@@ -12,7 +12,6 @@ import {Component,OnInit} from '@angular/core';
 
 export class WeatherListComponent implements OnInit{
 
-    errorMessage: string;
     weatherItems:WeatherItem[];
 
     constructor(private weatherService:WeatherService) {}

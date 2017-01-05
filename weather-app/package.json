@@ -1,7 +1,7 @@
 {
-    "name":"angular2-weather",
+    "name":"angular2-boilertemplate",
     "version": "1.0.0",
-    "description": "ujrc's angular2 weather app",
+    "description": "ujrc's angular2 boilertemplate",
     "scripts": {
         "start": "tsc &&concurrently \"tsc -w\" \"lite-server\" ",
         "lite":"lite-server",

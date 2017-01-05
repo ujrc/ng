@@ -1,12 +1,11 @@
-<div class="card">
-<div class="card-block">
-    <form  class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
+<section class="weather-search">
+<form  class="form-horizontal" (ngSubmit)="onSubmit(f)" #f="ngForm">
     <div class="row">
         <div class="form-group">
     <label for="city" class="control-label col-xs-2">City: </label>
     <div class="col-xs-4">
         <div class = "input-group">
-            <input  class="form-control" type="text" id="cityName" name="cityName" required ngModel>          
+            <input  class="form-control" type="text" name="cityName" required>          
             <span class = "input-group-btn">
                 <button class="btn btn-primary" type="submit">Add City</button>
             </span>               
@@ -15,5 +14,5 @@
             </div>
             </div>
 </form>
-</div>
-</div>
+<div class="alert alert-info"><span>City found</span>&nbsp;City Name</div>
+</section>

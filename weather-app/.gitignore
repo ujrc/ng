@@ -1,2 +1,6 @@
 /node_modules
-/weather/constants
+/app/weather/constants/*
+/app/*.js
+/app/*.js.map
+/app/**/**/*.js
+/app/**/**/*.js.map

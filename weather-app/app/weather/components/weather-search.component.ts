@@ -1,7 +1,8 @@
+import { WeatherService } from './../services/weather.services';
+import { NgForm } from '@angular/forms';
 import { WeatherItem } from './../model/weather-item';
-import { WeatherService } from './../services/weather.service';
+
 import { Component } from '@angular/core';
-import {NgForm}  from '@angular/forms';
 
 @Component({
     selector:'app-weather-search',
@@ -9,23 +10,27 @@ import {NgForm}  from '@angular/forms';
   
 })
 export class WeatheSearchComponent{
-   constructor(private weatherService:WeatherService){}
+    
+    constructor(private weatherService:WeatherService){}
 
-onSubmit(form:NgForm){
+onSubmit(form: NgForm){
    this.weatherService.searchWeatherData(form.value.cityName)
    .subscribe(
        data=>{
            const weatherItem=new WeatherItem(data.name,data.weather[0].description,data.main.temp, data.wind.speed);
-           
-           
            this.weatherService.addWeatherItem(weatherItem);
            console.log(weatherItem);
 
        }
    )
-} 
-    loadCity(){
-
-    }
+}
+onSearchLocation(cityName:string){
+     this.weatherService.searchWeatherData(cityName)
+   .subscribe(
+       data=>{
+           const weatherItem=new WeatherItem(data.name,data.weather[0].description,data.main.temp, data.wind.speed);
+           this.weatherService.addWeatherItem(weatherItem);
+   })
+   }
 
 }

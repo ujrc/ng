@@ -1,8 +1,8 @@
-import { AppModule } from './app.module';
 import {Component, OnInit} from '@angular/core';
 
 
 @Component({
+//    moduleId:module.id // used to find external files
 selector:'app-root',
 templateUrl:'./app/app.component.html'
 })
