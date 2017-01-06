@@ -19,7 +19,7 @@ export class WeatherService{
     }
 
     searchWeatherData(cityName:string): Observable<any>{
-        return this.http.get('http://api.openweathermap.org/data/2.5/weather?q=madison&APPID='+OPEN_WEATHER_API_KEY+'&units=metric')
+        return this.http.get('http://api.openweathermap.org/data/2.5/weather?q='+cityName+'&APPID='+OPEN_WEATHER_API_KEY+'&units=imperial')
         .map(resp=>resp.json())
         .catch(error=>{
             console.error(error);

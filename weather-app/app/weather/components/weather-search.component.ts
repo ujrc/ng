@@ -14,6 +14,7 @@ export class WeatheSearchComponent{
     constructor(private weatherService:WeatherService){}
 
 onSubmit(form: NgForm){
+    if (form.value.cityName){
    this.weatherService.searchWeatherData(form.value.cityName)
    .subscribe(
        data=>{
@@ -23,6 +24,17 @@ onSubmit(form: NgForm){
 
        }
    )
+    }
+    else{
+        this.weatherService.searchWeatherData("Madison")
+   .subscribe(
+       data=>{
+           const weatherItem=new WeatherItem(data.name,data.weather[0].description,data.main.temp, data.wind.speed);
+           this.weatherService.addWeatherItem(weatherItem);
+           console.log(weatherItem);
+    }
+   )
+    }
 }
 onSearchLocation(cityName:string){
      this.weatherService.searchWeatherData(cityName)

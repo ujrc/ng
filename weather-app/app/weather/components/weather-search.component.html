@@ -5,7 +5,8 @@
     <label for="city" class="control-label col-xs-2">City: </label>
     <div class="col-xs-4">
         <div class = "input-group">
-            <input  class="form-control" type="text" name="cityName" required>          
+            <input  class="form-control" type="text" name="cityName" required ngModel
+             (input)="onSearchLocation(input.value)" #input>          
             <span class = "input-group-btn">
                 <button class="btn btn-primary" type="submit">Add City</button>
             </span>               
