@@ -1,0 +1,8 @@
+/node_modules
+/app/constants/*
+/app/*.js
+/app/*.js.map
+/app/**/*.js
+/app/**/*.js.map
+/app/**/**/*.js
+/app/**/**/*.js.map
