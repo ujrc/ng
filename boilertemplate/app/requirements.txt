@@ -1,0 +1,4 @@
+After cloning the boilertemplate:
+npm install
+npm start
+
