@@ -1,0 +1,46 @@
+<div class="container">
+
+    <section *ngIf="person">
+        <h2>You selected: {{person.name}} </h2>
+        <h3>Description</h3>
+        <p>
+            {{person.name}} weights {{person.weight}} and is {{person.height}} tall.
+        </p>
+    </section>
+    <section class="row">
+        <form class="horizontal-form" #personForm="ngForm" (ngSubmit)="savePersonInfo()">
+            <div class="form-group">
+                <label class="control-label col-xs-3" for="name">Name: </label>
+                <div class="col-xs-6">
+                    <input class="form-control" type="text" name="name" required [(ngModel)]="person.name" #name="ngModel">
+                    <div [hidden]="name.valid || name.pristine" class="error">
+                        Name is required my good sir/lady!
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="weight" class="control-label col-xs-3">Weight: </label>
+                <div class="col-xs-6">
+                    <input class="form-control" type="number" name="weight" [(ngModel)]="person.weight">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="height" class="control-label col-xs-3">Height: </label>
+                <div class="col-xs-6">
+                    <input class="form-control" type="number" name="height" [(ngModel)]="person.height">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="profession">Hobby:</label>
+                <select name="profession" [(ngModel)]="person.profession">
+          <option *ngFor="let hobby of hobbies" [value]="hobby">{{hobby}}</option>
+        </select>
+            </div>
+            <div class="form-group">
+                <button type="submit" [disabled]="!personForm.form.valid" class="btn btn-success">Save</button>
+            </div>
+        </form>
+    </section>
+    <button class="btn btn-primary" (click)="backToList()">Back to list</button>
